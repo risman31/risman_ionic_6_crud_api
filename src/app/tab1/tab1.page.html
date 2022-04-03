@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title>
+          Digiwork Dynamic - Table
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>        
+<ion-card-content>
+
+    <table class="table table-striped">
+      <thead class="table mb-0"> 
+        <tr>
+            <th>No</th>
+            <th>NPM</th>
+            <th>Nama</th>
+            <th>Jurusan</th>
+            <th>Prodi</th>
+            <th>Kelas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mahasiswa of GETMahasiswa; let i=index;">
+          <td>{{i+1}}</td>
+          <td>{{mahasiswa.npm}}</td>
+          <td>{{mahasiswa.nama}}</td>
+          <td>{{mahasiswa.jurusan}}</td>
+          <td>{{mahasiswa.prodi}}</td>
+          <td>{{mahasiswa.kelas}}</td>
+          <th>
+            <button type="edit" (click)="edit()" routerLink="./tab2" class="btn btn-primary">Edit</button>
+            -
+            <button type="delete" (click)="deleteData(mahasiswa.npm)" routerLink="./tab1" class="btn btn-danger">Delete</button>   
+
+          </th>
+        </tr>
+      </tbody>
+    </table>
+
+      </ion-card-content>
+</ion-card>
+
+</ion-content>

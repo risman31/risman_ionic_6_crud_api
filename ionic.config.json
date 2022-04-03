@@ -1,0 +1,7 @@
+{
+  "name": "risman_ionic_crud_api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
